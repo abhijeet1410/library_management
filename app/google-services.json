@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "504992533552",
+    "firebase_url": "https://imca-library.firebaseio.com",
+    "project_id": "imca-library",
+    "storage_bucket": "imca-library.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504992533552:android:4fe7ab8a753a44a4",
+        "android_client_info": {
+          "package_name": "com.smarttersstudio.libraryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504992533552-d9u49mae9q8tfpu1sbp42dsbkq8rns03.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smarttersstudio.libraryapp",
+            "certificate_hash": "130cb485088abb68453046efe823fb0b93365ac9"
+          }
+        },
+        {
+          "client_id": "504992533552-rm7ii4dn51slr595bv3n1c204ooglk2k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5jcI51ksgkz0fDw1CGQtdDObTy_uCZ-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504992533552-rm7ii4dn51slr595bv3n1c204ooglk2k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
