@@ -6,6 +6,10 @@ import android.os.Bundle;
 
 import com.smarttersstudio.libraryapp.R;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -13,7 +17,13 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        startActivity(new Intent(SplashActivity.this,SignInActivity.class));
-        finish();
+        final ScheduledExecutorService exec = Executors.newScheduledThreadPool(1);
+        exec.schedule(new Runnable(){
+            @Override
+            public void run(){
+                startActivity(new Intent(SplashActivity.this,SignInActivity.class));
+                finish();
+            }
+        }, 1, TimeUnit.SECONDS);
     }
 }

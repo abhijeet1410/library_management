@@ -10,7 +10,6 @@
         android:layout_width="0sp"
         android:layout_height="0sp"
         android:background="@drawable/background"
-        android:scaleType="matrix"
         app:layout_constraintBottom_toBottomOf="@id/bg_guideline"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -32,14 +31,14 @@
             android:layout_height="wrap_content"
             android:text="@string/sign_in_title"
             android:textColor="#fff"
-            android:textSize="40sp" />
+            android:textSize="@dimen/title_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sign_in_subtitle"
             android:textColor="#fff"
-            android:textSize="16sp" />
+            android:textSize="@dimen/subtitle_text_size" />
     </LinearLayout>
 
     <android.support.v7.widget.CardView
@@ -47,7 +46,7 @@
         android:layout_height="0sp"
         android:layout_marginStart="20sp"
         android:layout_marginEnd="20sp"
-        android:layout_marginBottom="40sp"
+        android:layout_marginBottom="20sp"
         app:cardCornerRadius="20sp"
         app:cardElevation="8sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_guideline"
@@ -67,6 +66,7 @@
                 app:layout_constraintTop_toTopOf="@id/email_top_guideline">
 
                 <EditText
+                    android:textSize="@dimen/edit_text_size"
                     android:id="@+id/sign_in_email"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -86,12 +86,13 @@
                 app:layout_constraintTop_toTopOf="@id/password_top_guideline">
 
                 <EditText
+                    android:textSize="@dimen/edit_text_size"
                     android:id="@+id/sign_in_password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:drawableStart="@drawable/lock_vector"
-                    android:hint="@string/password"
                     android:drawablePadding="5sp"
+                    android:hint="@string/password"
                     android:inputType="textPassword" />
 
             </android.support.design.widget.TextInputLayout>
@@ -102,7 +103,7 @@
                 android:onClick="goToForgotPassword"
                 android:text="@string/forgot_password"
                 android:textColor="@color/colorAccent"
-                android:textSize="16sp"
+                android:textSize="@dimen/link_text_size"
                 app:layout_constraintRight_toRightOf="@id/right_guideline"
                 app:layout_constraintTop_toTopOf="@id/forgot_guideline" />
 
@@ -111,21 +112,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.2" />
+                app:layout_constraintGuide_percent="0.15" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/password_top_guideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.5" />
+                app:layout_constraintGuide_percent="0.45" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/forgot_guideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.73" />
+                app:layout_constraintGuide_percent="0.8" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/left_guideline"
@@ -148,17 +149,15 @@
         android:id="@+id/sign_in_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40sp"
-        android:layout_marginEnd="40sp"
         android:background="@drawable/button_background"
         android:elevation="8sp"
         android:onClick="doSignIn"
         android:padding="15sp"
         android:text="@string/submit"
         android:textColor="@color/buttonTextColor"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintLeft_toLeftOf="@id/button_left_guideline"
+        app:layout_constraintRight_toRightOf="@id/button_right_guideline"
         app:layout_constraintTop_toTopOf="@id/button_guideline" />
     <TextView
         android:layout_width="wrap_content"
@@ -170,10 +169,9 @@
         android:onClick="goToSignUp"
         android:text="@string/sign_up_here"
         android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/link_text_size"
+        app:layout_constraintLeft_toLeftOf="@id/button_left_guideline"
+        app:layout_constraintRight_toRightOf="@id/button_right_guideline"
         app:layout_constraintTop_toBottomOf="@id/sign_in_btn" />
     <android.support.constraint.Guideline
         android:id="@+id/sign_in_guideline"
@@ -194,7 +192,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.73" />
 
     <android.support.constraint.Guideline
         android:id="@+id/bg_guideline"
@@ -202,5 +200,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/button_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/button_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
 
 </android.support.constraint.ConstraintLayout>

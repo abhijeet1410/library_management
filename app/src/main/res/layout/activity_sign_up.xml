@@ -29,14 +29,14 @@
             android:layout_height="wrap_content"
             android:text="@string/sign_up_title"
             android:textColor="#fff"
-            android:textSize="40sp" />
+            android:textSize="@dimen/title_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sign_up_subtitle"
             android:textColor="#fff"
-            android:textSize="16sp" />
+            android:textSize="@dimen/subtitle_text_size" />
     </LinearLayout>
 
     <android.support.v7.widget.CardView
@@ -44,7 +44,7 @@
         android:layout_height="0sp"
         android:layout_marginStart="20sp"
         android:layout_marginEnd="20sp"
-        android:layout_marginBottom="40sp"
+        android:layout_marginBottom="20sp"
         app:cardCornerRadius="20sp"
         app:cardElevation="8sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_guideline"
@@ -55,8 +55,6 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-
             <android.support.design.widget.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -65,6 +63,7 @@
                 app:layout_constraintTop_toTopOf="@id/name_top_guideline">
 
                 <EditText
+                    android:textSize="@dimen/edit_text_size"
                     android:id="@+id/sign_up_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -83,6 +82,7 @@
                 app:layout_constraintTop_toTopOf="@id/phone_top_guideline">
 
                 <EditText
+                    android:textSize="@dimen/edit_text_size"
                     android:id="@+id/sign_up_phone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -101,6 +101,7 @@
                 app:layout_constraintTop_toTopOf="@id/email_top_guideline">
 
                 <EditText
+                    android:textSize="@dimen/edit_text_size"
                     android:id="@+id/sign_up_email"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -121,6 +122,7 @@
                 app:layout_constraintTop_toTopOf="@id/password_top_guideline">
 
                 <EditText
+                    android:textSize="@dimen/edit_text_size"
                     android:id="@+id/sign_up_password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -177,34 +179,30 @@
 
     <Button
         android:id="@+id/sign_in_btn"
-        android:layout_width="0dp"
+        android:layout_width="0sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40sp"
-        android:layout_marginEnd="40sp"
         android:background="@drawable/button_background"
         android:elevation="8sp"
         android:onClick="doRegister"
-        android:padding="15sp"
         android:text="@string/register"
+        android:padding="15sp"
         android:textColor="@color/buttonTextColor"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintLeft_toLeftOf="@id/button_left_guideline"
+        app:layout_constraintRight_toRightOf="@id/button_right_guideline"
         app:layout_constraintTop_toTopOf="@id/button_guideline" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:onClick="goToLogin"
         android:text="@string/sign_up_text"
         android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/link_text_size"
+        app:layout_constraintLeft_toLeftOf="@id/button_left_guideline"
+        app:layout_constraintRight_toRightOf="@id/button_right_guideline"
         app:layout_constraintTop_toBottomOf="@id/sign_in_btn" />
     <android.support.constraint.Guideline
         android:id="@+id/sign_in_guideline"
@@ -233,5 +231,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/button_left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/button_right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
 
 </android.support.constraint.ConstraintLayout>

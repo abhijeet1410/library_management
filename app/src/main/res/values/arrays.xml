@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="library_app_color_array">
+        <item name = "one" type = "color">#7D3C98</item>
+        <item name = "two" type = "color">#5DADE2</item>
+        <item name = "three" type = "color">#E74C3C</item>
+        <item name = "four" type = "color">#27AE60</item>
+        <item name = "five" type = "color">#F1C40F</item>
+        <item name = "size" type = "color">#029776</item>
+    </array>
+</resources>

@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <item >
-        <rotate
-            android:pivotX="100%"
-            android:fromDegrees="60"
-            android:pivotY="0%"
-            android:toDegrees="0">
-            <shape>
-                <gradient
-                    android:endColor="#5592FD"
-                    android:startColor="#8641FD"
-                    android:angle="315"
-                    />
-            </shape>
-        </rotate>
-    </item>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="50"
+    android:viewportHeight="70"
+    android:width="50dp"
+    android:height="70dp">
 
-    <!--<item-->
-        <!--android:width="48dp"-->
-        <!--android:height="48dp"-->
-        <!--android:left="350dp"-->
-        <!--android:top="400dp">-->
-    <!--</item>-->
-
-    <!--<item-->
-        <!--android:width="68dp"-->
-        <!--android:height="68dp"-->
-        <!--android:left="-20dp"-->
-        <!--android:top="480dp" />-->
-</layer-list>
+    <path
+        android:pathData="M00,00 L00,70 L100,0 z">
+    <aapt:attr name="android:fillColor">
+        <gradient
+            android:endColor="#5592FD"
+            android:endX="40"
+            android:endY="40"
+            android:startColor="#8641FD"
+            android:startX="0"
+            android:startY="20"
+            />
+    </aapt:attr>
+    </path>
+</vector>
