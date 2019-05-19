@@ -17,13 +17,13 @@ public class DirectoryViewHolder extends RecyclerView.ViewHolder {
         availableText=itemView.findViewById(R.id.book_available);
     }
     public void setTitle(String title){
-        titleText.setText("Book Name :"+title);
+        titleText.setText(title);
     }
     public void setAuthor(String author){
-        authorText.setText("Author :"+author);
+        authorText.setText("Author : "+author);
     }
     public void setAvailable(String available){
-        availableText.setText("Available :"+available);
+        availableText.setText("Available : "+available);
     }
 
 }

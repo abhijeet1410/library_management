@@ -12,12 +12,18 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
         tools:targetApi="m">
-        <activity android:name=".activities.AboutUsActivity"/>
-        <activity android:name=".activities.NotificationActivity" />
-        <activity android:name=".activities.HistoryActivity" />
-        <activity android:name=".activities.BooksDirectoryActivity" />
-        <activity android:name=".activities.IssuedBooksActivity" />
-        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.AboutUsActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name=".activities.NotificationActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name=".activities.HistoryActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity android:name=".activities.BooksDirectoryActivity"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".activities.IssuedBooksActivity"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".activities.HomeActivity"
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name=".activities.ForgotPasswordActivity"
             android:label="@string/forgot_password"

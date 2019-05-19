@@ -3,107 +3,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="10dp"
+    android:layout_margin="5dp"
+    app:contentPadding="5dp"
     android:layout_height="150dp">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/issued_books"
+            android:id="@+id/image"/>
 
         <TextView
             android:id="@+id/book_title"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
+            android:maxLines="2"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginLeft="4dp"
             android:text="Book Name: Demo"
+            android:layout_toRightOf="@id/image"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/book_title_guideline"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintLeft_toLeftOf="@id/left_guideline"
-            app:layout_constraintRight_toRightOf="@id/right_guideline"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.571" />
+            android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/image"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/book_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Book ID: Demo"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-
-        <TextView
-            android:id="@+id/book_id"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Book ID: Demo"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/book_id_guideline"
-            app:layout_constraintLeft_toLeftOf="@id/left_guideline"
-            app:layout_constraintRight_toRightOf="@id/right_guideline"
-            app:layout_constraintTop_toTopOf="@+id/book_title_guideline" />
-
-        <TextView
-            android:id="@+id/issued_date"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="ISSUED ON: 15/12/2018"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@id/issued_date_guideline"
-            app:layout_constraintLeft_toLeftOf="@id/left_guideline"
-            app:layout_constraintRight_toRightOf="@id/right_guideline"
-            app:layout_constraintTop_toTopOf="@+id/book_id_guideline" />
-
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/book_title_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.33" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/book_id_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.67" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/left_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.04" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/right_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.96" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/issued_date_guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.9" />
-
+            <TextView
+                android:id="@+id/issued_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:text="ISSUED ON: 15/12/2018"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
         <ImageButton
             android:id="@+id/copy_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/book_title_guideline"
-            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
-            app:layout_constraintHorizontal_bias="0.986"
-            app:layout_constraintStart_toStartOf="@+id/left_guideline"
-            app:srcCompat="@drawable/copy_vector" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/copy_vector" />
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>

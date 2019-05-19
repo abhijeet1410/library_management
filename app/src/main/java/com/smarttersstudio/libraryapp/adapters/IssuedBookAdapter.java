@@ -30,9 +30,9 @@ public class IssuedBookAdapter extends RecyclerView.Adapter<IssuedBookViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull IssuedBookViewHolder holder, int position) {
-        holder.setBookTitle("Book name: "+l.get(position).getBookName());
-        holder.setBookId("Book id: "+l.get(position).getBookId());
-        holder.setIssuedDate("Issue Date: "+l.get(position).getIssueDate());
+        holder.setBookTitle(""+l.get(position).getBookName());
+        holder.setBookId("Book id : "+l.get(position).getBookId());
+        holder.setIssuedDate("Issue Date : "+l.get(position).getIssueDate());
         holder.handleCopy(l.get(position).getBookName(),context);
     }
 
