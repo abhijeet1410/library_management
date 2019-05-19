@@ -39,4 +39,5 @@
     <string name="yes_msg">Yes</string>
     <string name="no_msg">No</string>
     <string name="menu_history">My history</string>
+    <string name="about_us">About US</string>
 </resources>

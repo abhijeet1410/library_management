@@ -28,7 +28,7 @@
 
 
         <TextView
-            android:id="@+id/book_id"
+            android:id="@+id/book_author"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -42,7 +42,7 @@
             app:layout_constraintTop_toTopOf="@+id/book_title_guideline" />
 
         <TextView
-            android:id="@+id/issued_date"
+            android:id="@+id/book_available"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

@@ -7,5 +7,6 @@
     <color name="iconColor">@color/colorPrimary</color>
     <color name="black">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="transparent_white">#46FFFFFF</color>
 
 </resources>

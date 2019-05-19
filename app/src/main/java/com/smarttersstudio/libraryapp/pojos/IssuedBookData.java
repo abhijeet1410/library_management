@@ -1,7 +1,28 @@
 package com.smarttersstudio.libraryapp.pojos;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class IssuedBookData {
-    private String bookName,bookTitle,issuedDate;
+    @SerializedName("id")
+    @Expose
+    private String bookId;
+
+    @SerializedName("name")
+    @Expose
+    private String bookName;
+
+    @SerializedName("timestamp")
+    @Expose
+    private String issueDate;
+
+    public String getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
+    }
 
     public String getBookName() {
         return bookName;
@@ -11,29 +32,20 @@ public class IssuedBookData {
         this.bookName = bookName;
     }
 
-    public String getBookTitle() {
-        return bookTitle;
+    public String getIssueDate() {
+        return issueDate;
     }
 
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
-    }
-
-    public String getIssuedDate() {
-        return issuedDate;
-    }
-
-    public void setIssuedDate(String issuedDate) {
-        this.issuedDate = issuedDate;
+    public void setIssueDate(String issueDate) {
+        this.issueDate = issueDate;
     }
 
     public IssuedBookData() {
     }
 
-    public IssuedBookData(String bookName, String bookTitle, String issuedDate) {
+    public IssuedBookData(String bookId, String bookName, String issueDate) {
+        this.bookId = bookId;
         this.bookName = bookName;
-        this.bookTitle = bookTitle;
-        this.issuedDate = issuedDate;
+        this.issueDate = issueDate;
     }
-
 }

@@ -1,9 +1,8 @@
 package com.smarttersstudio.libraryapp.activities;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -29,10 +28,8 @@ import com.smarttersstudio.libraryapp.util.views.ProgressDialog;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class SignInActivity extends AppCompatActivity {
 

@@ -9,6 +9,7 @@ public class Constants {
     public static final String REGISTER_URL=API_URL+"register.php";
     public static final String LOGIN_URL=API_URL+"login.php";
     public static final String ISSUED_BOOK = API_URL+"getMyIssuedBooks.php";
+    public static final String DIRECTORY = API_URL+"getAllBooks.php";
 
     private static int index;
 

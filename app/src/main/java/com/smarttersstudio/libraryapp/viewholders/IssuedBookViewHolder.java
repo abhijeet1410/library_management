@@ -3,11 +3,12 @@ package com.smarttersstudio.libraryapp.viewholders;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.smarttersstudio.libraryapp.R;
 
@@ -28,15 +29,24 @@ public class IssuedBookViewHolder extends RecyclerView.ViewHolder {
     public void setBookTitle(String bookTitle){
         tvBookTitle.setText(bookTitle);
     }
+
     public void setBookId(String bookId){
         tvBookId.setText(bookId);
     }
+
     public void setIssuedDate(String issuedDate){
         tvIssuedDate.setText(issuedDate);
     }
-    public void handleCopy(String bookTitle,Context context){
-        ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText("Title", bookTitle);
-        clipboard.setPrimaryClip(clip);
+
+    public void handleCopy(final String bookTitle, final Context context){
+        copyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("Title", bookTitle);
+                clipboard.setPrimaryClip(clip);
+                Toast.makeText(context, "Book name copied to clipboard", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

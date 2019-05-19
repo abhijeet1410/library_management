@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ForgotPasswordActivity">
+    tools:context=".activities.AboutUsActivity">
 
     <View
         android:layout_width="0sp"
         android:layout_height="0sp"
-        android:background="@drawable/forgot_background"
+        android:background="@drawable/background"
         app:layout_constraintBottom_toBottomOf="@id/bg_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -27,14 +29,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/forgot_password_title"
+            android:text="About Us"
             android:textColor="#fff"
             android:textSize="@dimen/title_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/forgot_password_subtitle"
+            android:text="@string/sign_in_subtitle"
             android:textColor="#fff"
             android:textSize="@dimen/subtitle_text_size" />
     </LinearLayout>
@@ -56,36 +58,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="@id/left_guideline"
-                app:layout_constraintRight_toRightOf="@id/right_guideline"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <EditText
-                    android:textSize="@dimen/edit_text_size"
-                    android:id="@+id/forgot_pass_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:drawableStart="@drawable/mail_vector"
-                    android:drawablePadding="5sp"
-                    android:hint="@string/email_address"
-                    android:inputType="textEmailAddress" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/email_top_guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.2" />
-
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/left_guideline"
@@ -104,20 +76,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/sign_in_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
-        android:elevation="8sp"
-        android:onClick="doResetPassword"
-        android:padding="15sp"
-        android:text="@string/reset"
-        android:textColor="@color/buttonTextColor"
-        android:textSize="@dimen/button_text_size"
-        app:layout_constraintLeft_toLeftOf="@id/button_left_guideline"
-        app:layout_constraintRight_toRightOf="@id/button_right_guideline"
-        app:layout_constraintTop_toTopOf="@id/button_guideline" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/sign_in_guideline"
@@ -131,21 +90,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/button_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_begin="534dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bg_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_begin="439dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/button_left_guideline"
