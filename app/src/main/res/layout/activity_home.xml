@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".activities.HomeActivity">
 
+    <ImageView
+        android:layout_width="55dp"
+        android:elevation="1dp"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:clickable="true"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="55dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/power_vector"
+        android:focusable="true"
+        android:onClick="doSignOut"/>
+
     <View
         android:layout_width="0sp"
         android:layout_height="0sp"
@@ -207,7 +221,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="0.7" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/button_left_guideline"
@@ -221,7 +235,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_begin="350dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -132,5 +133,9 @@ public class DirectoryActivity extends AppCompatActivity {
         query=searchText.getText().toString();
         offset=0;
         loadData();
+    }
+
+    public void goBack(View view) {
+        startActivity(new Intent(this,HomeActivity.class));
     }
 }

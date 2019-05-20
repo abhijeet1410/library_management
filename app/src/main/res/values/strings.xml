@@ -41,5 +41,5 @@
     <string name="menu_history">My history</string>
     <string name="about_us">About US</string>
     <string name="history_title">Transactions</string>
-    <string name="history_subtitle">Here are the list of your previous transactions</string>
+    <string name="history_subtitle">Here is the list of your previous transactions</string>
 </resources>

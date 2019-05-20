@@ -3,6 +3,7 @@ package com.smarttersstudio.libraryapp.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -114,5 +115,9 @@ public class NotificationActivity extends AppCompatActivity {
                 loadData();
             }
         });
+    }
+
+    public void goBack(View view) {
+        startActivity(new Intent(this,HomeActivity.class));
     }
 }

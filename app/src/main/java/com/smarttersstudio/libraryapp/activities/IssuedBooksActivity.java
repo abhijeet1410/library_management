@@ -1,5 +1,6 @@
 package com.smarttersstudio.libraryapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -108,5 +109,9 @@ public class IssuedBooksActivity extends AppCompatActivity {
                 issuedList.setRefreshing(false);
             }
         });
+    }
+
+    public void goBack(View view) {
+        startActivity(new Intent(this,HomeActivity.class));
     }
 }
