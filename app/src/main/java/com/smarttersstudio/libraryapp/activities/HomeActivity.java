@@ -24,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void gotoBookDirectory(View view) {
-        startActivity(new Intent(this,BooksDirectoryActivity.class));
+        startActivity(new Intent(this, DirectoryActivity.class));
     }
 
     public void gotoHistory(View view) {
