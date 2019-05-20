@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -125,5 +126,9 @@ public class HistoryActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void goBack(View view) {
+        startActivity(new Intent(this,HomeActivity.class));
     }
 }

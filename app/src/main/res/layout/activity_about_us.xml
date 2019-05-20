@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".activities.AboutUsActivity">
 
+    <ImageView
+        android:layout_width="55dp"
+        android:elevation="1dp"
+        android:padding="10dp"
+        android:clickable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="55dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/cross_vector_white"
+        android:focusable="true"
+        android:onClick="goBack"/>
     <View
         android:layout_width="0sp"
         android:layout_height="0sp"
