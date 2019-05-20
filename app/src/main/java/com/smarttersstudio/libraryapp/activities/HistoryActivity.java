@@ -129,6 +129,6 @@ public class HistoryActivity extends AppCompatActivity {
     }
 
     public void goBack(View view) {
-        startActivity(new Intent(this,HomeActivity.class));
+        finish();
     }
 }

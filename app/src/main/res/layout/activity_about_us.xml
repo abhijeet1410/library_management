@@ -48,23 +48,76 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sign_in_subtitle"
+            android:text="@string/about_us_subtitle"
             android:textColor="#fff"
             android:textSize="@dimen/subtitle_text_size" />
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="0sp"
         android:layout_height="0sp"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
         android:layout_marginBottom="20sp"
         app:cardCornerRadius="20sp"
         app:cardElevation="8sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_guideline"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/button_left_guideline"
+        app:layout_constraintRight_toRightOf="@id/button_right_guideline"
         app:layout_constraintTop_toTopOf="@id/card_guideline">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="11">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/app_logo"
+                android:layout_weight="4"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="10dp"
+                android:text="@string/app_name"
+                android:textSize="34sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/averia_libre"
+                android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Version"
+                android:textSize="16dp"
+                android:fontFamily="@font/averia_libre"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="A short descrption which \n will be added later on \n thank you"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:fontFamily="@font/averia_libre"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+        </LinearLayout>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -116,21 +169,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="439dp" />
+        app:layout_constraintGuide_percent="0.70" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/button_left_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/button_right_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.95" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/made_by_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/link_text_size" />
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smatters_studio_text"
+            android:textColor="@color/color_red"
+            android:layout_marginStart="5sp"
+            android:textSize="@dimen/link_text_size" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copyright_msg"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="5sp"
+            android:textSize="@dimen/link_text_size" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

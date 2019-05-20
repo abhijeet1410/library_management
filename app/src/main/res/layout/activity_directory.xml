@@ -39,14 +39,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your Board"
+            android:text="@string/directory_title"
             android:textColor="#fff"
             android:textSize="@dimen/title_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View what you can do here."
+            android:text="@string/directory_subtitle"
             android:textColor="#fff"
             android:textSize="@dimen/subtitle_text_size" />
     </LinearLayout>

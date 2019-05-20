@@ -118,6 +118,6 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
     public void goBack(View view) {
-        startActivity(new Intent(this,HomeActivity.class));
+        finish();
     }
 }
