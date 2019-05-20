@@ -12,7 +12,7 @@ public class Constants {
     public static final String DIRECTORY = API_URL+"getAllBooks.php";
     public static final String NOTIFICATION = API_URL+"getMyRequests.php";
     public static final String HISTORY_URL = API_URL+"getMyHistory.php";
-    public static final String RESOLVE = API_URL+"resolveMyRequest";
+    public static final String RESOLVE = API_URL+"resolveMyRequest.php";
 
     private static int index;
 

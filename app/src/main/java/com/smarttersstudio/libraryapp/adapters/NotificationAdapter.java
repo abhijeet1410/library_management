@@ -104,7 +104,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationViewHo
             @Override
             protected Map<String, String> getParams() {
                 Map<String,String> m=new HashMap<>();
-                m.put("request_id", requestID);
+                m.put("id", requestID);
                 m.put("action",action);
                 return m;
             }
