@@ -4,6 +4,19 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class NotificationData {
+
+    @SerializedName("id")
+    @Expose
+    private String requestID;
+
+    public String getRequestID() {
+        return requestID;
+    }
+
+    public void setRequestID(String requestID) {
+        this.requestID = requestID;
+    }
+
     @SerializedName("action")
     @Expose
     private String action;
