@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,16 +7,50 @@
     tools:context=".activities.HistoryActivity">
     <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="200dp"
-        android:background="@drawable/background"
-         />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        android:background="@drawable/background" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history_title"
+            android:textColor="#fff"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history_subtitle"
+            android:textColor="#fff"
+            android:textSize="@dimen/subtitle_text_size" />
+    </LinearLayout>
+
     <com.malinskiy.superrecyclerview.SuperRecyclerView
         android:layout_width="match_parent"
         android:id="@+id/history_list"
-        android:visibility="gone"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
     <include layout="@layout/empty_layout"/>
     <include layout="@layout/loader_layout"/>
     <include layout="@layout/warning_layout"/>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,18 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.IssuedBooksActivity">
+
     <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="200dp"
-        android:background="@drawable/background"
-        />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        android:background="@drawable/background" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Issued Books"
+            android:textColor="#fff"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here is the list of books you issued"
+            android:textColor="#fff"
+            android:textSize="@dimen/subtitle_text_size" />
+    </LinearLayout>
 
     <com.malinskiy.superrecyclerview.SuperRecyclerView
+        android:id="@+id/issued_books_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/issued_books_list"/>
-    <include layout="@layout/empty_layout"/>
-    <include layout="@layout/loader_layout"/>
-    <include layout="@layout/warning_layout"/>
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <include layout="@layout/empty_layout" />
+
+    <include layout="@layout/loader_layout" />
+
+    <include layout="@layout/warning_layout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
