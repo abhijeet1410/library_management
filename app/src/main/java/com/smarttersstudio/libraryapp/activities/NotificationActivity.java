@@ -1,6 +1,7 @@
 package com.smarttersstudio.libraryapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
@@ -105,6 +106,7 @@ public class NotificationActivity extends AppCompatActivity {
         loader=findViewById(R.id.loader_layout);
         empty=findViewById(R.id.empty_layout);
         warning=findViewById(R.id.warning_layout);
+        notificationList.setLayoutManager(new LinearLayoutManager(this));
 
         uid = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
 

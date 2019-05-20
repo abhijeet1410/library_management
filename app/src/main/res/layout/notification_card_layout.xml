@@ -31,9 +31,9 @@
             android:layout_height="0sp"
             android:text="Notification subtitle"
             android:id="@+id/notification_card_subtitle"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/black"
             android:textSize="14sp"
-            android:gravity="center_vertical"
+            android:gravity="start"
             app:layout_constraintBottom_toBottomOf="@id/time_horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="@id/vertical"
@@ -56,8 +56,7 @@
             android:layout_width="0sp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="vertical"
-            android:padding="5sp"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/vertical"
             app:layout_constraintRight_toRightOf="parent"
@@ -69,6 +68,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/tick_vector"
                 app:backgroundTint="@color/colorWhite"
+                android:layout_marginEnd="10sp"
                 app:elevation="2sp"
                 app:fabSize="mini" />
 
@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.8" />
+            app:layout_constraintGuide_percent="0.75" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/time_horizontal"
