@@ -84,7 +84,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationViewHo
                         Log.e("notificationResponse",response);
                         try {
                             JSONObject object = new JSONObject(response);
-                            if(object.getString("status").equalsIgnoreCase("success")){
+                            if(object.getBoolean("result")){
                                 list.remove(position);
                                 notifyItemRemoved(position);
                                 Toast.makeText(context, object.getString("reason"), Toast.LENGTH_SHORT).show();
