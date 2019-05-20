@@ -3,7 +3,7 @@ package com.smarttersstudio.libraryapp.pojos;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class History {
+public class HistoryData {
     @SerializedName("action")
     @Expose
     private String action;
@@ -17,14 +17,14 @@ public class History {
     @Expose
     private String timestamp;
 
-    public History(String action, String name, String bookId, String timestamp) {
+    public HistoryData(String action, String name, String bookId, String timestamp) {
         this.action = action;
         this.name = name;
         this.bookId = bookId;
         this.timestamp = timestamp;
     }
 
-    public History() {
+    public HistoryData() {
     }
 
     public String getAction() {

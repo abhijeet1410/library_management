@@ -26,6 +26,7 @@
             android:layout_marginLeft="8dp"
             android:background="@drawable/green_stroke"
             android:text="Issued"
+            android:textAllCaps="true"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="2dp"

@@ -14,15 +14,12 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.gson.Gson;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 import com.smarttersstudio.libraryapp.R;
 import com.smarttersstudio.libraryapp.adapters.DirectoryAdapter;
-import com.smarttersstudio.libraryapp.adapters.IssuedBookAdapter;
 import com.smarttersstudio.libraryapp.pojos.DirectoryData;
-import com.smarttersstudio.libraryapp.pojos.IssuedBookData;
 import com.smarttersstudio.libraryapp.util.Constants;
 import com.smarttersstudio.libraryapp.util.VolleySingleton;
 
@@ -33,7 +30,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BooksDirectoryActivity extends AppCompatActivity {
+public class DirectoryActivity extends AppCompatActivity {
     private SuperRecyclerView directoryList;
     private RelativeLayout loader,empty,warning;
     private String query="";
@@ -43,7 +40,7 @@ public class BooksDirectoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_books_directory);
+        setContentView(R.layout.activity_directory);
         initViews();
         loadData();
     }
@@ -74,7 +71,7 @@ public class BooksDirectoryActivity extends AppCompatActivity {
                                 directoryList.setVisibility(View.VISIBLE);
                                 directoryList.setLoadingMore(false);
                                 if(offset==0) {
-                                    adapter= new DirectoryAdapter(list, BooksDirectoryActivity.this);
+                                    adapter= new DirectoryAdapter(list, DirectoryActivity.this);
                                     directoryList.setAdapter(adapter);
                                 }else{
                                     adapter.addData(list);

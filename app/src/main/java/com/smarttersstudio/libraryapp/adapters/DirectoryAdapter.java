@@ -36,6 +36,7 @@ public class DirectoryAdapter extends RecyclerView.Adapter<DirectoryViewHolder> 
         holder.setAuthor(list.get(position).getAuthor());
         holder.setTitle(list.get(position).getName());
         holder.setAvailable(list.get(position).getAvailable());
+        holder.handleCopy(list.get(position).getName(),context);
     }
 
     @Override

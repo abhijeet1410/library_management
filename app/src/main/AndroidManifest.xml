@@ -22,7 +22,7 @@
         <activity android:name=".activities.HistoryActivity"
             android:theme="@style/NoActionBar" />
 
-        <activity android:name=".activities.BooksDirectoryActivity"
+        <activity android:name=".activities.DirectoryActivity"
             android:theme="@style/NoActionBar" />
 
         <activity android:name=".activities.IssuedBooksActivity"
