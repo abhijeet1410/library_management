@@ -55,110 +55,112 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="0sp"
+                android:orientation="vertical"
+                android:weightSum="5"
+                android:layout_height="0sp"
                 app:layout_constraintLeft_toLeftOf="@id/left_guideline"
                 app:layout_constraintRight_toRightOf="@id/right_guideline"
-                app:layout_constraintTop_toTopOf="@id/name_top_guideline">
-
-                <EditText
-                    android:textSize="@dimen/edit_text_size"
-                    android:id="@+id/sign_up_name"
+                app:layout_constraintTop_toTopOf="@id/top_guideline"
+                app:layout_constraintBottom_toTopOf="@id/bottom_guideline">
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:drawableStart="@drawable/person_vector"
-                    android:drawablePadding="5sp"
-                    android:hint="@string/name"
-                    android:inputType="text" />
+                    android:layout_height="0sp"
+                    android:layout_weight="1">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <EditText
+                        android:textSize="@dimen/edit_text_size"
+                        android:id="@+id/sign_up_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/person_vector"
+                        android:drawablePadding="5sp"
+                        android:hint="@string/name"
+                        android:inputType="text" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="@id/left_guideline"
-                app:layout_constraintRight_toRightOf="@id/right_guideline"
-                app:layout_constraintTop_toTopOf="@id/phone_top_guideline">
-
-                <EditText
-                    android:textSize="@dimen/edit_text_size"
-                    android:id="@+id/sign_up_phone"
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:drawablePadding="5sp"
-                    android:drawableStart="@drawable/phone_vector"
-                    android:hint="@string/phone"
-                    android:inputType="phone" />
+                    android:layout_height="0sp"
+                    android:layout_weight="1">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <EditText
+                        android:textSize="@dimen/edit_text_size"
+                        android:id="@+id/sign_up_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="5sp"
+                        android:drawableStart="@drawable/phone_vector"
+                        android:hint="@string/phone"
+                        android:inputType="phone" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="@id/left_guideline"
-                app:layout_constraintRight_toRightOf="@id/right_guideline"
-                app:layout_constraintTop_toTopOf="@id/email_top_guideline">
-
-                <EditText
-                    android:textSize="@dimen/edit_text_size"
-                    android:id="@+id/sign_up_email"
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:drawableStart="@drawable/mail_vector"
-                    android:drawablePadding="5sp"
-                    android:hint="@string/email_address"
-                    android:inputType="textEmailAddress" />
+                    android:layout_height="0sp"
+                    android:layout_weight="1">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <EditText
+                        android:textSize="@dimen/edit_text_size"
+                        android:id="@+id/sign_up_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/mail_vector"
+                        android:drawablePadding="5sp"
+                        android:hint="@string/email_address"
+                        android:inputType="textEmailAddress" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="#8655FC"
-                app:layout_constraintLeft_toLeftOf="@id/left_guideline"
-                app:layout_constraintRight_toRightOf="@id/right_guideline"
-                app:layout_constraintTop_toTopOf="@id/password_top_guideline">
-
-                <EditText
-                    android:textSize="@dimen/edit_text_size"
-                    android:id="@+id/sign_up_password"
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:drawableStart="@drawable/lock_vector"
-                    android:drawablePadding="5sp"
-                    android:hint="@string/password"
-                    android:inputType="textPassword" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="0sp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:textSize="@dimen/edit_text_size"
+                        android:id="@+id/sign_up_roll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/roll_vector"
+                        android:drawablePadding="5sp"
+                        android:hint="@string/roll"
+                        android:inputType="textCapCharacters" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="1"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#8655FC">
+
+                    <EditText
+                        android:textSize="@dimen/edit_text_size"
+                        android:id="@+id/sign_up_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/lock_vector"
+                        android:drawablePadding="5sp"
+                        android:hint="@string/password"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/name_top_guideline"
+                android:id="@+id/top_guideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="0.1" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/email_top_guideline"
+                android:id="@+id/bottom_guideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.3" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/phone_top_guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.5" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/password_top_guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.7" />
+                app:layout_constraintGuide_percent="0.9" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/left_guideline"
@@ -204,19 +206,20 @@
         app:layout_constraintLeft_toLeftOf="@id/button_left_guideline"
         app:layout_constraintRight_toRightOf="@id/button_right_guideline"
         app:layout_constraintTop_toBottomOf="@id/sign_in_btn" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/sign_in_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/card_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/button_guideline"

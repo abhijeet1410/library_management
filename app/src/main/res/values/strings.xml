@@ -48,4 +48,5 @@
     <string name="about_us_subtitle">Information about the app</string>
     <string name="directory_title">Find Book</string>
     <string name="directory_subtitle">Search and find your desired book</string>
+    <string name="roll">Roll</string>
 </resources>

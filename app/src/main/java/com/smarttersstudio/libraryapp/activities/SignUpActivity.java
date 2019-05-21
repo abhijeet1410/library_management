@@ -4,6 +4,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -29,13 +30,15 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText nameText,emailText,phoneText,passwordText;
+    private EditText nameText,emailText,phoneText,passwordText, rollText;
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
-    private String name,email,phone,password,token;
+    private String name,email,phone,password,roll,token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,7 @@ public class SignUpActivity extends AppCompatActivity {
         emailText = findViewById(R.id.sign_up_email);
         phoneText = findViewById(R.id.sign_up_phone);
         passwordText = findViewById(R.id.sign_up_password);
+        rollText = findViewById(R.id.sign_up_roll);
 
         mAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
@@ -103,13 +107,13 @@ public class SignUpActivity extends AppCompatActivity {
                                 finish();
                             }
                         } catch (JSONException e) {
-                            e.printStackTrace();
+                            Log.e("signupjson",e.getMessage());
                         }
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Log.e("signupvolly",error.getMessage());
             }
         }){
             @Override
@@ -120,6 +124,7 @@ public class SignUpActivity extends AppCompatActivity {
                 m.put("phone",phone);
                 m.put("email",email);
                 m.put("fcm",token);
+                m.put("roll",roll);
                 return m;
             }
         };
@@ -135,6 +140,7 @@ public class SignUpActivity extends AppCompatActivity {
         email = emailText.getText().toString().trim();
         phone = phoneText.getText().toString().trim();
         password = passwordText.getText().toString().trim();
+        roll = rollText.getText().toString().trim();
 
         if(TextUtils.isEmpty(name)){
             nameText.setError(getResources().getString(R.string.empty_error_msg));
@@ -147,6 +153,12 @@ public class SignUpActivity extends AppCompatActivity {
             return false;
         }else if(TextUtils.isEmpty(password)){
             passwordText.setError(getResources().getString(R.string.empty_error_msg));
+            return false;
+        }else if (TextUtils.isEmpty(roll)){
+            rollText.setError(getResources().getString(R.string.empty_error_msg));
+            return false;
+        }else if(!roll.matches("^\\d{2}[A-Z]{4}\\d{3}$") || !roll.equals(roll.toUpperCase())){
+            rollText.setError("Wrong format");
             return false;
         }
         return true;

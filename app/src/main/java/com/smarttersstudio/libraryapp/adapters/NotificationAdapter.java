@@ -51,7 +51,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationViewHo
     public void onBindViewHolder(@NonNull NotificationViewHolder holder, final int position) {
         holder.setTitle(list.get(position).getAction());
         holder.setSubtitle(list.get(position).getBookName(),list.get(position).getBookID());
-        holder.setTime(list.get(position).getDateTime());
+        holder.setTime(Constants.getFormattedDate(list.get(position).getDateTime()));
         holder.accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

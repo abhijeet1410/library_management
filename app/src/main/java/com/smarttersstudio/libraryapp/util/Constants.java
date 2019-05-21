@@ -1,8 +1,13 @@
 package com.smarttersstudio.libraryapp.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Constants {
     public static final String API_URL = "http://library.uuimca.org/api/";
@@ -39,5 +44,15 @@ public class Constants {
             colors.recycle();
         }
         return returnColor;
+    }
+    public static String getFormattedDate(String datetime){
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        Date d = new Date();
+        try {
+            d = sdf.parse(datetime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return sdf.format(d);
     }
 }
