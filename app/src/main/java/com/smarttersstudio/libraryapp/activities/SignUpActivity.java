@@ -157,11 +157,10 @@ public class SignUpActivity extends AppCompatActivity {
         }else if (TextUtils.isEmpty(roll)){
             rollText.setError(getResources().getString(R.string.empty_error_msg));
             return false;
-        }else if(!roll.matches("^\\d{2}[A-Z]{4}\\d{3}$") || !roll.equals(roll.toUpperCase())){
+        }else if(!roll.matches("^\\d{2}IMCA\\d{3}$")){
             rollText.setError("Wrong format");
             return false;
         }
         return true;
     }
-
 }
